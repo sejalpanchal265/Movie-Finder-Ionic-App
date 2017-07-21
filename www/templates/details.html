@@ -1,0 +1,49 @@
+<ion-view title="Details" id="page2" class=" ">
+    <ion-content padding="true" class="has-header">
+        <div class="card">
+            <img src="{{movieDetailObj.Poster}}" style="display: block; margin-left: auto; margin-right: auto;"></img>
+        </div>
+        
+        <h4 id="details-heading1" style="color:#000000;" class=" ">{{movieDetailObj.Title}}</h4>
+        <div class="row border1px">
+            <div class="col "><strong>Year: </strong></div>
+            <div class="col col-90"> {{movieDetailObj.Year}}</div>
+        </div>
+        <div class="row border1px">
+            <div class="col "><strong>Release Date: </strong></div>
+            <div class="col col-67"> {{movieDetailObj.Released}}</div>
+        </div>
+        <div class="row border1px">
+            <div class="col "><strong>Genre: </strong></div>
+            <div class="col col-90"> {{movieDetailObj.Genre}}</div>
+        </div>
+        <div class="row border1px">
+            <div class="col "><strong>Director: </strong></div>
+            <div class="col col-90"> {{movieDetailObj.Director}}</div>
+        </div>
+        <div class="row border1px">
+            <div class="col "><strong>Writer: </strong></div>
+            <div class="col col-90"> {{movieDetailObj.Writer}}</div>
+        </div>
+        <div class="row border1px">
+            <div class="col "><strong>Actors: </strong></div>
+            <div class="col col-90"> {{movieDetailObj.Actors}}</div>
+        </div>
+        <div class="row border1px">
+            <div class="col "><strong>Plot: </strong></div>
+            <div class="col col-90"> {{movieDetailObj.Plot}}</div>
+        </div>
+        <div class="row border1px">
+            <div class="col "><strong>Language: </strong></div>
+            <div class="col col-90"> {{movieDetailObj.Language}}</div>
+        </div>
+        <div class="row border1px">
+            <div class="col "><strong>Country: </strong></div>
+            <div class="col col-90"> {{movieDetailObj.Country}}</div>
+        </div>
+        <div class="row border1px">
+            <div class="col "><strong>IMDB Rating: </strong></div>
+            <div class="col col-67"> {{movieDetailObj.imdbRating}}</div>
+        </div>
+    </ion-content>
+</ion-view>

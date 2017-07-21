@@ -1,0 +1,32 @@
+<ion-view title="Home" id="page1" class=" ">
+    <ion-content>
+        <form id="home-form1" class="list" ng-submit="seachMovie(1)" novalidate>
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="search" placeholder="Search Movies" ng-model="search.keyword" required>
+            </label>
+        </form>
+        <div ng-if="searchedDataArray.length > 0" class="list card animated {{isPrevious ? 'bounceInLeft' : 'bounceInRight'}}">
+            <ion-list>
+                <ion-item ng-repeat="searchedData in searchedDataArray" class="item-thumbnail-left animated"
+                          id="home-list-item10" ui-sref="menu.detail({imdbID: searchedData.imdbID})" >
+                    <!--img src="{{searchedData.Poster != 'N/A' ? searchedData.Poster : 'img/n-a.png'}}"-->
+                    <h2>{{searchedData.Title}}</h2>
+                    <p style="white-space:normal;">Type: {{searchedData.Type}}</p>
+                    <p style="white-space:normal;">Year: {{searchedData.Year}}</p>
+                    <p style="white-space:normal;">imdbID: {{searchedData.imdbID}}</p>
+                </ion-item>
+            </ion-list>
+        </div>
+        
+    </ion-content>
+        <ion-footer-bar align-title="left" class="bar-positive">
+            <div class="buttons" ng-if="page > 1" ng-click="getPreviousResult()">
+              <button class="button"><i class="ion-chevron-left"></i> Prev</button>
+            </div>
+            <h1 class="title text-center" ng-show="totalPage > 0">{{page}} / {{totalPage}}</h1>
+            <div class="buttons" ng-if="page < totalPage" ng-click="getNextResult()">
+              <button class="button">Next <i class="ion-chevron-right"></i></button>
+            </div>
+        </ion-footer-bar>
+</ion-view>
